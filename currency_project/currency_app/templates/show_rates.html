@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Currency Rates</title>
+</head>
+<body>
+<h1>Currency Rates for {{ date }}</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Currency</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for rate in rates %}
+            <tr>
+                <td>{{ rate.currency }}</td>
+                <td>{{ rate.value }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
